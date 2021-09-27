@@ -1,0 +1,60 @@
+<html>
+<title>My Calculator </title>
+<head>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+	.cal {margin: auto;  height: 200px;  width: 210px;}
+         button {height: 50px; width: 50px;}
+ </style>
+<script> 
+
+	var cal=(x)=>{
+	document.getElementById("result").value+=x;
+	}
+var solve=()=>{
+let sum=document.getElementById("result").value;
+document.getElementById("result").value=eval(sum);
+}
+
+var clr=()=>document.getElementById("result").value="";
+</script>
+</head>
+<body>
+<h1 style="text-align:center;">Calculator</h1>
+
+<div class="cal">
+<table>
+<tr>
+<td colspan="4"><input type="text" placeholder="0" id="result" class="form-control" placeholder="0" ></td>
+</tr>
+<tr>
+<td> <button id="btn1"  class="btn btn-outline-secondary" onClick="cal('1')">1</button> </td>
+<td> <button id="btn2"  class="btn btn-outline-secondary" onClick="cal('2')">2</button> </td>
+<td> <button id="btn3"  class="btn btn-outline-secondary"onclick="cal('3')">3</button> </td>
+<td> <button id="btnDiv" class="btn btn-outline-secondary"onclick="cal('/')">&#247;</button><br> </td>
+</tr>
+<tr>
+<td> <button id="btn4" class="btn btn-outline-secondary"onclick="cal('4')">4</button> </td>
+<td> <button id="btn5" class="btn btn-outline-secondary"onclick="cal('5')">5</button> </td>
+<td> <button id="btn6" class="btn btn-outline-secondary"onclick="cal('6')">6</button> </td>
+<td> <button id="btnMul" class="btn btn-outline-secondary"onclick="cal('*')">x</button><br> </td>
+</tr>
+<tr>
+<td>  <button id="btn7" class="btn btn-outline-secondary"onclick="cal('7')">7</button></td>
+<td> <button id="btn8" class="btn btn-outline-secondary" onclick="cal('8')">8</button> </td>
+<td> <button id="btn9" class="btn btn-outline-secondary" onclick="cal('9')">9</button></td>
+<td> <button id="btnMinus" class="btn btn-outline-secondary" onclick="cal('-')">-</button> </td>
+</tr>
+<tr>
+<td> <button id="btnDot" class="btn btn-outline-secondary" onclick="cal('.')">.</button> </td>
+<td> <button id="btn0" class="btn btn-outline-secondary" onclick="cal('0')">0</button> </td>
+<td> <button id="btnEqual" class="btn btn-outline-secondary" onclick="solve()">=</button> </td>
+<td> <button id="btnPlus" class="btn btn-outline-secondary"onclick="cal('+')">+</button> </td>
+</tr>
+<tr><td colspan="4"><butoon style="width:210px;" id="btndel" class="btn btn-outline-secondary"onclick="clr()">Del</button></td></tr>
+</table>
+</div>
+
+</body>
+</html>
